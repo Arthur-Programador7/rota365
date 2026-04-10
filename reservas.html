@@ -1,0 +1,80 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Reserva de Viagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img id="logoClaro" src="./imagens/logotipo/logo_clara_47.png" alt="Logo clara">
+    <img id="logoEscuro" src="./imagens/logotipo/logo_escura_se_lá.png" alt="Logo escura" style="display: none;">
+    <h1>Rota.365 - Reserva de Viagem</h1>
+    <button id="modoEscuro">🌙</button>
+  </header>
+
+  <main>
+    <section id="formularioReserva">
+      <h2>Preencha os dados da viagem</h2>
+
+      <label>Nome completo:</label><br>
+      <input type="text" id="nome" required><br><br>
+      
+      <label>Data de Partida:</label><br>
+      <input type="date" id="dataPartida" required><br><br>
+
+      <label>Destino:</label><br>
+      <select id="destino" required>
+        <option value="">Selecione</option>
+        <option value="Rio de Janeiro" data-km="1160">Rio de Janeiro</option>
+        <option value="salvador" data-km="1089">Salvador</option>
+        <option value="PortoAlegre" data-km="1620">Porto Alegre</option>
+        <option value="espiritosanto" data-km="940">Espirito Santo</option>
+        <option value="seoul" data-km="17620">Seoul</option>
+        <option value="istambul" data-km="10095">Istambul</option>
+        <option value="paris" data-km="8700">Paris</option>
+        <option value="orlando" data-km="8700">Orlando</option>
+        <option value="singapura" data-km="8700">Singapura</option>
+        <option value="Icaraí de Amontada" data-km="1770">Icaraí de Amontada</option>
+        <option value="Nobres" data-km="1185">Nobres</option>
+        <option value="Rio Grande do Sul" data-km="2022.3">Rio Grande do Sul</option>
+        <option value="Jericoacoara" data-km="2096.4">Jericoacoara</option>
+        <option value="Balneário Camboriú" data-km="1596.6">Balneário Camboriú</option>
+        <option value="Veneza" data-km="7454">Veneza</option>
+        <option value="Tokyo" data-km="16808">Tokyo</option>
+        <option value="Moscou" data-km="11179">Moscou</option>
+      </select><br><br>
+
+      <label>Quantidade de passageiros:</label><br>
+      <input type="number" id="passageiros" min="1" value="1" required><br><br>
+
+      <label>Tipo de assento:</label><br>
+      <select id="assento" required>
+        <option value="">Selecione</option>
+        <option value="padrao">Padrão</option>
+        <option value="vip">VIP</option>
+        <option value="executiva">Executiva</option>
+      </select><br>
+
+      <p id="assentosDisponiveis">Assentos disponíveis (Padrão): <strong>--</strong></p><br>
+      
+      <div id="simulacaoPreco">
+          </div>
+      <br>
+
+      <button id="confirmar">Confirmar Reserva</button>
+      <p id="erro" class="erro"></p>
+    </section>
+
+    <section id="resultado" class="oculto"></section>
+  </main>
+
+  <footer>
+    <p>Contato: contato@rota365.com | Tel: (61) 4002-8922</p>
+    <p>Redes sociais: @Rota365</p>
+    <p>Todos os Direitos reservados</p>
+  </footer>
+
+  <script src="style.css"></script>
+</body>
+</html>
